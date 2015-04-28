@@ -6,11 +6,11 @@
 
 
 MCU = atmega328p
-ARDUINO_DIR = /usr/share/arduino
-ARDUINO_CORE_PATH= $(ARDUINO_DIR)/hardware/arduino/cores/arduino
-ARDUINO_VARIANT= $(ARDUINO_DIR)/hardware/arduino/variants/standard
+ARDUINO_DIR = /home/machinekit/Downloads/arduino-1.6.3
+ARDUINO_CORE_PATH= $(ARDUINO_DIR)/hardware/arduino/avr/cores/arduino
+ARDUINO_VARIANT= $(ARDUINO_DIR)/hardware/arduino/avr/variants/standard
 ARDUINO_LIB_PATH= $(ARDUINO_DIR)/libraries
-USER_LIB_PATH := /home/jgeisler/sketchbook/libraries
+USER_LIB_PATH := /home/machinekit/Arduino/libraries
 ARDUINO_VERSION= 105
 
 F_CPU = 16000000
@@ -35,7 +35,7 @@ CPPSRC= 	timer_Arduino.cpp\
 	ds401.cpp\
 	main.cpp
 
-USER_LIB_CPP_SRCS= $(USER_LIB_PATH)/mcp_can/mcp_can.cpp
+USER_LIB_CPP_SRCS= $(USER_LIB_PATH)/CAN_BUS_Shield/mcp_can.cpp
 
 LIB_CPP_SRCS= $(ARDUINO_LIB_PATH)/SPI/SPI.cpp
 
